@@ -1,0 +1,90 @@
+<******* Punto #2 *****>
+
+#include <iostream>
+
+int main() {
+    // Leer tres valores
+    int valor1, valor2, valor3;
+    std::cout << "Ingrese el primer valor: ";
+    std::cin >> valor1;
+    std::cout << "Ingrese el segundo valor: ";
+    std::cin >> valor2;
+    std::cout << "Ingrese el tercer valor: ";
+    std::cin >> valor3;
+
+    // Validar que los valores sean diferentes
+    if (valor1 != valor2 && valor1 != valor3 && valor2 != valor3) {
+        // Determinar el mayor y el menor
+        int mayor = std::max(std::max(valor1, valor2), valor3);
+        int menor = std::min(std::min(valor1, valor2), valor3);
+
+        // Imprimir el resultado
+        std::cout << "El mayor valor es: " << mayor << std::endl;
+        std::cout << "El menor valor es: " << menor << std::endl;
+    } else {
+        // Imprimir mensaje de alerta
+        std::cout << "Debe ingresar valores diferentes." << std::endl;
+    }
+
+    return 0;
+}
+
+//La función std::max() se utiliza para determinar el mayor valor entre tres números
+//La función std::min() se utiliza para encontrar el menor valor. 
+//Si los valores ingresados son iguales, se muestra un mensaje de alerta.
+
+
+
+
+<******* Punto #6 *****>
+
+Inicio
+├─ Ingresar número
+├─ Dividir el número entre 2
+├─ Obtener el residuo de la división
+├─ ¿El residuo es igual a 0?
+│  ├─ Sí: El número es par
+│  └─ No: El número es impar
+Fin
+
+
+<******* Punto #9 *****>
+
+
+
+int main() {
+    // Solicitar las tres notas al usuario
+    float nota1, nota2, nota3;
+    std::cout << "Ingrese la nota del primer examen: ";
+    std::cin >> nota1;
+    std::cout << "Ingrese la nota del segundo examen: ";
+    std::cin >> nota2;
+    std::cout << "Ingrese la nota del tercer examen: ";
+    std::cin >> nota3;
+
+    // Calcular el promedio de las notas
+    float promedio = (nota1 + nota2 + nota3) / 3;
+
+    // Imprimir la nota y el mensaje de aprobación o no aprobación
+    std::cout << "La nota promedio del estudiante es: " << promedio << std::endl;
+    if (promedio >= 3.5) {
+        std::cout << "¡Aprobado!" << std::endl;
+    } else {
+        std::cout << "No aprobado." << std::endl;
+    }
+
+    return 0;
+}
+
+
+//Datos de entrada
+Nota1
+Nota2
+Nota3
+
+//Procesos
+condicional "if" si este es mayor o igual a 3.5 botará un mensaje con el "¡aprobado!" de lo contrario imprime el condicional "else" con el menjase "¡No Aprobado!"
+
+//Salidas 
+mensaje de aprobación o no apronación junto al promedio almacemado en "std"
+#include <iostream>
